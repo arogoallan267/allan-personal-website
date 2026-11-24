@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allan Arogo | My Personal Website</title>
+
+    <!--CSS Styling-->
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        hrader {
+            background-color: #10243e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #183b5b;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 70px 20px;
+            background-color: #dceaf5;
+        }
+
+        .welcome {
+            font-size: 35px;
+            color: #10243e;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        h3 {
+            color: #183b5b;
+        }
+
+        button {
+            background-color: #10243e;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00a6cc;
+        }
+
+        footer {
+            background-color: #10243e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--HRADER-->
+
+    <header>
+        <h1>ALLAN AROGO</h1>
+        <P>Welcome to My Personal Website</P>
+    </header>
+
+    <!--NAVIGATION-->
+
+    <nav>
+        <a href="#home"></a>
+        <a href="#about"></a>
+        <a href="#education"></a>
+        <a href="#skills"></a>
+        <a href="#contact"></a>
+    </nav>
+
+    <!--HOME SECTION-->
+
+    <section class="welcome" id="home">
+
+        <h2>Hello, Welcome</h2>
+
+        <p>
+            I am Allan Arogo, an Acconting student and 
+            an aspiring web developer
+        </p>
+
+        <button onclick="showMessage()">
+            Click Here
+        </button>
+
+    </section>
+
+    <!--MAIN CONTENT-->
+
+    <main class="container">
+
+        <!--ABOUT ME-->
+
+        <section class="card" id="about">
+
+            <h3>About Me</h3>
+
+            <p>
+                My name is Allan Arogo. I am a Bachelor of Commerce student specializing in Accounting at Kenyatta University.
+                I am interested in business, technology,innovation and Personal development.
+                I am also learning web development to improve my technical skills.
+            </p>
+
+        </section>
+
+        <!--EDUCATION-->
+
+        <section class="card" id="education">
+
+            <h3>My Education</h3>
+
+            <ul>
+                <li>Bachelor of Commerce - Kenyatta University</li>
+                <li>Kenya Certificate of Secondary Education</li>
+                <li>Kenya Certificateof Primary Education</li>
+            </ul>
+
+        </section>
+
+        <!--SKILLS-->
+
+        <section class="card" id="skills">
+
+            <h3>My Skills and Interest</h3>
+
+            <ul>
+                <li>Comunication Skills</li>
+                <li>Teamwork</li>
+                <li>Problem Solving</li>
+                <li>Business and Accounting</li>
+                <li>Learning HTML and CSS</li>
+            </ul>
+
+        </section>
+
+        <!--contact-->
+
+        <section class="card" id="contact">
+
+            <h3>Contact Me</h3>
+            <p>Email: arogoallan267@gmail.com</p>
+            <p>Location:Nairobi.Kenya</p>
+            <p>GitHub: arogoallan267</p>
+
+        </section>
+
+    </main>
+
+    <!--FOOTER-->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Allan Arogo.
+            All Rights Reserved.
+        </p>
+
+        <p>Designed and Developed by Allan Arogo</p>
+
+    </footer>
+
+    <!--JAVASCRIPT-->
+
+    <script>
+        function showMessage() {
+            alert("Thankn you for visiting my Website");
+        }
+    </script>
+
+</body>
+</html>
