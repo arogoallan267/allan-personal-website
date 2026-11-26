@@ -4,110 +4,304 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allan Arogo | My Personal Website</title>
+    
+    <meta name="description" content="The personal portfolio of Allan Arogo, an Accounting student and aspiring web developer.">
+    
+   <style>
+       /*GENERAL SETTINGS */
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           scroll-behaviour: smooth;
+       }
 
-    <!--CSS Styling-->
-    <style>
+       body {
+           font-family: Arial. sans-serif;
+           background: #080b18;
+           color: #ffffff;
+           line-light: 1.7;
+       }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        hrader {
-            background-color: #10243e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #183b5b;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
+        :root {
+               --blue: #438cff;
+               --purple: #9b5cff;
+               --dark: #080b18;
+               --card: #12182b;
+       }
+           
+       a {
             text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #00d4ff;
-        }
-
-        .welcome {
-            text-align: center;
-            padding: 70px 20px;
-            background-color: #dceaf5;
-        }
-
-        .welcome {
-            font-size: 35px;
-            color: #10243e;
-        }
+             color: inherit;
+       }
 
         .container {
-            width: 85%;
-            max-width: 1000px;
-            margin: auto;
-            border-radius: 10px;
+               width: 90%;
+               max-width: 1150px;
+               margin: auto;
+       }
+           
+       */ NAVIGATION BAR */
+            header {
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                background: rgba(8, 11, 24, 0.95);
+                border-bottom: 1px solid #222a40;       
+       }
+
+        nav {
+            min-height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .card {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: var(--blue);
         }
 
-        h3 {
-            color: #183b5b;
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
         }
 
-        button {
-            background-color: #10243e;
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .menu-btn {
+            diplay: none;
             color: white;
-            padding: 12px 25px;
+            background: none;
             border: none;
-            border-radius: 5px;
+            font-size: 28px;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #00a6cc;
+        /* HERO SECTION */
+        .hero {
+            main-height: 85vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 30%,
+                rgba(67, 140, 255, 0.18), transparent 35%),
+                radial-gradient(circle at 20% 80%,
+                rgba(155, 92, 255, 0.15), transparent 35%);
+            
         }
 
-        footer {
-            background-color: #10243e;
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 75px);
+            line-height: 1.15;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--blue),
+                          var(--purple));
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        ,hero p {
+            color: #b9c2d8;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .small-heading {
+            color: var(--blue);
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, var(--blue) var(--purple));
             color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transport: translate(-4px);
+            bo-shadow: 0 5px 25px rgba(67, 140, 255, 0.35);
+        }
+
+        .btn-otline {
+            background: transparent;
+            border: 1px solid var(--blue);
+            margin-left: 10px;
+        }
+
+        /* GENERAL SECTION */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-tittle {
+            font-size: 35pxpx;
             text-align: center;
-            padding: 20px;
+            margin-bottom: 15px;
         }
 
-        @media (max-width: 600px) {
-            nav a {
-                display: inline-block;
-                margin: 8px;
+        .section-tittle span {
+            color: var(--blue);
+        }
+
+        .section-intro {
+            text-align: center;
+            color: #aeb8ce;
+            margin-bottom: 45px;
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            max-witdh: 808px;
+            margin: auto;
+            text-align: center;
+            color: #c1c9d9
+        }
+
+        /* EDUCATION AND SKILLS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid #252e49;
+            padding: 28px;
+            border-radius: 14px;
+            transition; 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--blue);
+        }
+
+        .card h3 {
+            color: var(--blue);
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #bac4d7;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skills {
+            background: #202b48;
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: #c5d8ff;
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project-number {
+            font-sixe: 35px;
+            color: var(--purple);
+            font-weight: bold;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-box p {
+            color: #bac4d7;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #050711;
+            color: #aeb8ce;
+            border-top: 1 px solid #252e49;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 768px); {
+
+            .menu-btn {
+                diplay: block;
             }
-        }
-    </style>
-
-</head>
-
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100;
+                padding: 25px;
+                background: #101629;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                min-height: 75vh;
+            }
+            .btn-outline {
+                margin: 12px 0 0;
+            }
+            .section-tittle {
+                font-size: 29px;
+            }
+        }   
+   </style>
+</head>  
+    
 <body>
 
-    <!--HRADER-->
-
-    <header>
-        <h1>ALLAN AROGO</h1>
-        <P>Welcome to My Personal Website</P>
-    </header>
-
     <!--NAVIGATION-->
+    <header>
+        <div class="container">
+            <nav>
+                <a href"#home" class="logo">ALLAN.</a>
+                
+                <button class="menu-btn" id=="menuBtn"
+                    arial-label="Toggle navigation"></button>
+                
+            </nav>
+            
+        </div>
+    </header>
 
     <nav>
         <a href="#home"></a>
@@ -119,88 +313,191 @@
 
     <!--HOME SECTION-->
 
-    <section class="welcome" id="home">
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                
+              <p class="small-heading">
+                 WELCOME TO MY PERSONAL PORTFOLIO
+              </p> 
+              <h1>
+                Hello, I'm <span>Allan Arogo.</span>        
+              </h1>
+                
+              <h2>Accounting Student | Aspiring Web Developer</h2>
 
-        <h2>Hello, Welcome</h2>
+                <p>
+                    I am passionate about business, accounting, technology and personal development.
+                    i enjoy learning new skills and turning creative ideas into practical solution.
+                </p>
 
-        <p>
-            I am Allan Arogo, an Acconting student and 
-            an aspiring web developer
-        </p>
+                <a href="#about" class="btn>Discover More</a>
 
-        <button onclick="showMessage()">
-            Click Here
-        </button>
-
+                <a href=#contact" class="btn btn-outline">
+                    
+                </a>
+            </div> 
+             
+        </div>    
     </section>
-
-    <!--MAIN CONTENT-->
-
-    <main class="container">
 
         <!--ABOUT ME-->
 
-        <section class="card" id="about">
+        <section id="about">
+            <div class="container">
 
-            <h3>About Me</h3>
+                <h2 class="section-tittle">
+                    About <span>Me</span>
+                </h2>
 
-            <p>
-                My name is Allan Arogo. I am a Bachelor of Commerce student specializing in Accounting at Kenyatta University.
-                I am interested in business, technology,innovation and Personal development.
-                I am also learning web development to improve my technical skills.
-            </p>
+                <p class="section-intro>
+                    Get to know me better
+                    </p>
+                    <div class="about-content">
+                    <p>
+                        My name is Allan Arogo. I am a Bachelor of Commerce student at Kenyatta University,
+                        specializing in Accounting.
 
-        </section>
+                        I have an iterest in Financial management,business operations and technology.
+
+                        I am also developing my skills in HTML, CSS and JavaScript as i work towards becoming a web develpoer.
+
+                        My goal is to combine business knowledge and technology to create meaningful opportunitues and solutions.
+                    </p>
+                 </div>
+            
+               <div>
+           </section>
 
         <!--EDUCATION-->
 
-        <section class="card" id="education">
+        <section id="education">
+            <div class="container">
 
-            <h3>My Education</h3>
+                <h2 class"section-tittle">
+                    My <span>Education</span>
+                </h2>
 
-            <ul>
-                <li>Bachelor of Commerce - Kenyatta University</li>
-                <li>Kenya Certificate of Secondary Education</li>
-                <li>Kenya Certificateof Primary Education</li>
-            </ul>
-
-        </section>
+                <p class="section-intro">
+                    My academic journey
+                </p>
+                
+                <div class="grid">
+                    
+                    <div claa="card">
+                        <h3>University Education</h3>
+                        <p>
+                            Kenyatta University<br>
+                            Bachelor of Commerce<br>
+                            Accounting Specialization<br>
+                            Countuing Student.
+                        </p>
+                </div>
+                
+            </div>
+        </section>    
 
         <!--SKILLS-->
 
-        <section class="card" id="skills">
+        <section id="skills">
+            <div class="container">
 
-            <h3>My Skills and Interest</h3>
+                <h2 class="section-tittle">
+                    My <span>Skills</span>   
+                </h2>
 
-            <ul>
-                <li>Comunication Skills</li>
-                <li>Teamwork</li>
-                <li>Problem Solving</li>
-                <li>Business and Accounting</li>
-                <li>Learning HTML and CSS</li>
-            </ul>
-
+                <p class="section-intro">
+                    Areas i am learning and developing
+                </p>
+                <div class="card">
+                    <div class="skill-list">
+                        <span class="skill">Financial Accounting</span>
+                        <span class="skill">Bookkeeping</span>
+                        <span class="skill">Business Studies</span>
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">JavaScript</span>
+                        <span class=skill">Communication</span>
+                        <span class="skill">Problem Solving</span>
+                        <span class="skill">Computer Literacy</span>     
+                    </div>
+                </div>
+                
+            </div>
         </section>
 
-        <!--contact-->
+        <!--PROJECT SECTION-->
+        <section id="projects">
+            <div class="container">
 
-        <section class="card" id="contact">
+                <h2 class="section-tittle">
+                    My <span>Projects</span>
+                </h2>
+                <p class="section-intro>
+                    Some of my learning and development projects
+                </p>
 
-            <h3>Contact Me</h3>
-            <p>Email: arogoallan267@gmail.com</p>
-            <p>Location:Nairobi.Kenya</p>
-            <p>GitHub: arogoallan267</p>
-
+                <div class="projects-grid">
+                    <div class="card">
+                        <div class="project=number">01</div>
+                        <h3>Personal Website</h3>
+                        <p>
+                            A personal portfolio website developed using HTML, CSS and JavaScript.
+                        </p>   
+                    </div>
+                <div class="card">
+                    <div class="project-number">02</div>
+                    <h3>Accounting Learning</h3>
+                    <p>
+                        Developing knowledge in Financial Accounting,bookkeeping and business.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="project-number">03</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Exploring with technologies and learning how to create interactive websites.
+                    </p>
+                </div>
+                
+            </div>    
         </section>
 
-    </main>
+        <!--CONTACT SECTION-->
+
+        <section id="contact">
+            <div class="container">
+
+                <h2 class="section-tittle">
+                    Get In <span>Touch</span>
+                </h2>
+                
+                <p class="section-intro">
+                    Let's connect and create opportunities
+                </p>
+
+                <div class="contact-box">
+                    <p>
+                        Interested in working together,sharing ideas or
+                        connecting professionally? Feel free reach out.
+    
+                    </p>
+                    <!-- Replace this Email with your real Email -->
+                    <a href="mailto:your-email@example.com"
+                        class="btn">
+                        Send me an Email
+                    </a>
+                    
+                </div>    
+            </div>
+        </section>
 
     <!--FOOTER-->
 
     <footer>
 
         <p>
-            &copy; 2026 Allan Arogo.
+            @ <span id="year"></span> Allan Arogo
             All Rights Reserved.
         </p>
 
@@ -211,9 +508,25 @@
     <!--JAVASCRIPT-->
 
     <script>
-        function showMessage() {
-            alert("Thankn you for visiting my Website");
-        }
+
+        //MOBILE MENU
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementId("navLinks")
+
+        menuBtn.addEventListner("click", function() {
+            navLinks.classList.toggle("active");
+        });
+
+        // CLOSE MENU AFTER CLICKING A LINK
+        document.querySelectorAll(".nav-links a"). ForEach(link => {
+            link.addEventListner("click", function() {
+                navLinks.classList.remove("active");
+            });
+        });
+
+        // AUTOMATIC COPYRIGHT YEAR
+        document.getElementById("year").textContent = 
+            new Date().getFullYear();
     </script>
 
 </body>
